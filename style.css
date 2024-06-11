@@ -1,0 +1,101 @@
+.container-fluid {
+    margin-left: 40px;
+}
+.cursor {
+    cursor: pointer;
+}
+.Table_of_contents {
+    text-align: left;
+    font-weight: 700;
+    font-size: 27px;
+    margin-top: 40px;
+}
+table {
+    margin-top: 30px;
+}
+.Heading {
+    font-weight: 700;
+    font-size: 13px;
+}
+.delete {
+    display: none;
+}
+th:hover > .delete {
+    display: inline-block;
+    float: right;
+}
+svg {
+    cursor: pointer;
+}
+.font-weight-min {
+    font-weight: 400;
+    font-size: 14px;
+}
+td {
+    min-width: 130px;
+    min-height: 38px;
+    font-weight: 400;
+    font-size: 14px;
+}
+th {
+    min-height: 38px;
+}
+.font-weight-max {
+    font-weight: 700;
+    font-size: 14px;
+}
+.text-left {
+    min-width: 250px;
+    min-height: 38px;
+    text-align: left;
+    padding-left: 50px !important;
+}
+.float_right {
+    float: right;
+}
+.plus {
+    width: 24px;
+    height: 24px;
+    background: url("./img/plus.svg");
+}
+.float_right.plus:hover {
+    background: url("./img/plus_active.svg");
+}
+.folder {
+    width: 24px;
+    height: 24px;
+    background: url("/img/folder.svg");
+}
+.float_right.folder:hover {
+    background: url("img/folder_active.svg");
+}
+.pp {
+    width: 8px;
+    height: 8px;
+    background: url("img/arrow.svg");
+    cursor: pointer;
+    display: inline-block;
+}
+.budget {
+    display: inline-block;
+}
+.oo {
+    width: 16px;
+    height: 16px;
+    background: url("img/sorting.svg");
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+}
+.oo:hover {
+    background: url("img/sorting_active.svg");
+}
+td.active {
+    background: white !important;
+}
+td:focus {
+    outline: none;
+}
+th:focus {
+    outline: none;
+}
