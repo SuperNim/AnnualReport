@@ -37,7 +37,21 @@ for (SVG of mySVG) {
 function deleteRow (event) {
     event.target.closest('tr').remove()
 }
-
+var plus_list = document.getElementsByClassName('plus')
+for (plus of plus_list) {
+    plus.addEventListener('click', plusRow)
+}
+var row_template = document.getElementById('row_template')
+var tbody = document.getElementById('tbody')
+function plusRow (e) {
+    tr = e.target.parentElement.parentElement
+    var row = row_template.cloneNode(true)
+    row.removeAttribute('id')
+    tbody.appendChild(row)
+    del = row.querySelector(".del")
+    del.addEventListener('click', deleteRow)
+    tr.after(row)
+}
 
 
 

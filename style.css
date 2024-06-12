@@ -99,3 +99,6 @@ td:focus {
 th:focus {
     outline: none;
 }
+#row_template {
+    display: none;
+}
