@@ -36,12 +36,12 @@
             </tr>
             </thead>
             <tbody id="tbody">
-            <tr class="table-active header_tr">
+            <tr data-level=0 class="table-active header_tr">
                 <th scope="row" class="font-weight-max text-left">
                     <div class="budget">
                         Бюджет
                     </div>
-                    <div class="oo">
+                    <div class="arrow_sorting">
                         <span class="sorting"></span>
                     </div>
                 </th>
@@ -81,9 +81,9 @@
             <tr data-level=0>
                 <th scope="row" class="font-weight-min cursor text-left">Разработка проекта
                     <div class="delete">
-                        <svg class="del" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.15631 11.6417L4.35839 12.8437L7.99999 9.20213L11.6416 12.8437L12.8437 11.6417L9.20208 8.00005L12.8437 4.35845L11.6416 3.15637L7.99999 6.79797L4.3584 3.15637L3.15631 4.35845L6.79791 8.00005L3.15631 11.6417Z" fill="black" fill-opacity="0.4"/>
-                        </svg>
+                        <div class="delete_container del">
+
+                        </div>
                     </div>
                 </th>
                 <td>2 000 000,00 ₽</td>
@@ -103,9 +103,9 @@
             <tr data-level=0>
                 <th scope="row" class="font-weight-min cursor text-left">Ремонтные работы
                     <div class="delete">
-                        <svg class="del" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.15631 11.6417L4.35839 12.8437L7.99999 9.20213L11.6416 12.8437L12.8437 11.6417L9.20208 8.00005L12.8437 4.35845L11.6416 3.15637L7.99999 6.79797L4.3584 3.15637L3.15631 4.35845L6.79791 8.00005L3.15631 11.6417Z" fill="black" fill-opacity="0.4"/>
-                        </svg>
+                        <div class="delete_container del">
+
+                        </div>
                     </div>
                 </th>
                 <td>1 500 000,00 ₽</td>
@@ -122,9 +122,9 @@
                 <td>0,00 ₽</td>
                 <td>0,00 ₽</td>
             </tr>
-            <tr data-level=0>
+            <tr data-level=-1>
                 <th scope="row" class="font-weight-max cursor text-left">
-                    <div class="pp">
+                    <div class="arrow_container">
                         <span class="arrow"></span>
                     </div>
                     Услуги
@@ -148,9 +148,9 @@
             <tr data-level=1>
                 <th scope="row" class="font-weight-min cursor text-left">Аудит и консалтинг
                     <div class="delete">
-                        <svg class="del" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.15631 11.6417L4.35839 12.8437L7.99999 9.20213L11.6416 12.8437L12.8437 11.6417L9.20208 8.00005L12.8437 4.35845L11.6416 3.15637L7.99999 6.79797L4.3584 3.15637L3.15631 4.35845L6.79791 8.00005L3.15631 11.6417Z" fill="black" fill-opacity="0.4"/>
-                        </svg>
+                        <div class="delete_container del">
+
+                        </div>
                     </div>
                 </th>
                 <td>250 000,00 ₽</td>
@@ -170,9 +170,9 @@
             <tr data-level=1>
                 <th scope="row" class="font-weight-min cursor text-left">Работа электрика
                     <div class="delete">
-                        <svg class="del" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.15631 11.6417L4.35839 12.8437L7.99999 9.20213L11.6416 12.8437L12.8437 11.6417L9.20208 8.00005L12.8437 4.35845L11.6416 3.15637L7.99999 6.79797L4.3584 3.15637L3.15631 4.35845L6.79791 8.00005L3.15631 11.6417Z" fill="black" fill-opacity="0.4"/>
-                        </svg>
+                        <div class="delete_container del">
+
+                        </div>
                     </div>
                 </th>
                 <td>200 000,00 ₽</td>
@@ -192,9 +192,9 @@
             <tr data-level=1>
                 <th scope="row" class="font-weight-min cursor text-left">Малярные работы
                     <div class="delete">
-                        <svg class="del" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.15631 11.6417L4.35839 12.8437L7.99999 9.20213L11.6416 12.8437L12.8437 11.6417L9.20208 8.00005L12.8437 4.35845L11.6416 3.15637L7.99999 6.79797L4.3584 3.15637L3.15631 4.35845L6.79791 8.00005L3.15631 11.6417Z" fill="black" fill-opacity="0.4"/>
-                        </svg>
+                        <div class="delete_container del">
+
+                        </div>
                     </div>
                 </th>
                 <td>50 000,00 ₽</td>
@@ -214,9 +214,9 @@
             <tr data-level=1>
                 <th scope="row" class="font-weight-min cursor text-left">Доставка
                     <div class="delete">
-                        <svg class="del" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.15631 11.6417L4.35839 12.8437L7.99999 9.20213L11.6416 12.8437L12.8437 11.6417L9.20208 8.00005L12.8437 4.35845L11.6416 3.15637L7.99999 6.79797L4.3584 3.15637L3.15631 4.35845L6.79791 8.00005L3.15631 11.6417Z" fill="black" fill-opacity="0.4"/>
-                        </svg>
+                        <div class="delete_container del">
+
+                        </div>
                     </div>
                 </th>
                 <td>0,00 ₽</td>
@@ -252,9 +252,9 @@
                 <td class="font-weight-max">0,00 ₽</td>
                 <td class="font-weight-max">0,00 ₽</td>
             </tr>
-            <tr data-level=0>
+            <tr data-level=-1>
                 <th scope="row" class="font-weight-max cursor text-left">
-                    <div class="pp">
+                    <div class="arrow_container">
                         <span class="arrow"></span>
                     </div>
                     Материалы
@@ -275,9 +275,9 @@
                 <td>0,00 ₽</td>
                 <td>0,00 ₽</td>
             </tr>
-            <tr>
+            <tr data-level=0>
                 <th scope="row" class="font-weight-max cursor text-left">
-                    <div class="pp">
+                    <div class="arrow_container">
                         <span class="arrow"></span>
                     </div>
                     Мебель
@@ -298,12 +298,12 @@
                 <td>0,00 ₽</td>
                 <td>0,00 ₽</td>
             </tr>
-            <tr>
+            <tr data-level=2>
                 <th scope="row" class="font-weight-min cursor text-left">Дерево
                     <div class="delete">
-                        <svg class="del" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.15631 11.6417L4.35839 12.8437L7.99999 9.20213L11.6416 12.8437L12.8437 11.6417L9.20208 8.00005L12.8437 4.35845L11.6416 3.15637L7.99999 6.79797L4.3584 3.15637L3.15631 4.35845L6.79791 8.00005L3.15631 11.6417Z" fill="black" fill-opacity="0.4"/>
-                        </svg>
+                        <div class="delete_container del">
+
+                        </div>
                     </div>
                 </th>
                 <td>–100 000,00 ₽</td>
@@ -320,12 +320,12 @@
                 <td>0,00 ₽</td>
                 <td>0,00 ₽</td>
             </tr>
-            <tr>
+            <tr data-level=2>
                 <th scope="row" class="font-weight-min cursor text-left">Стекло
                     <div class="delete">
-                        <svg class="del" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.15631 11.6417L4.35839 12.8437L7.99999 9.20213L11.6416 12.8437L12.8437 11.6417L9.20208 8.00005L12.8437 4.35845L11.6416 3.15637L7.99999 6.79797L4.3584 3.15637L3.15631 4.35845L6.79791 8.00005L3.15631 11.6417Z" fill="black" fill-opacity="0.4"/>
-                        </svg>
+                        <div class="delete_container del">
+
+                        </div>
                     </div>
                 </th>
                 <td>–50 000,00 ₽</td>
@@ -342,12 +342,12 @@
                 <td>0,00 ₽</td>
                 <td>0,00 ₽</td>
             </tr>
-            <tr>
+            <tr data-level=2>
                 <th scope="row" class="font-weight-min cursor text-left">Фурнитура
                     <div class="delete">
-                        <svg class="del" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.15631 11.6417L4.35839 12.8437L7.99999 9.20213L11.6416 12.8437L12.8437 11.6417L9.20208 8.00005L12.8437 4.35845L11.6416 3.15637L7.99999 6.79797L4.3584 3.15637L3.15631 4.35845L6.79791 8.00005L3.15631 11.6417Z" fill="black" fill-opacity="0.4"/>
-                        </svg>
+                        <div class="delete_container del">
+
+                        </div>
                     </div>
                 </th>
                 <td>–30 000,00 ₽</td>
@@ -364,9 +364,9 @@
                 <td>0,00 ₽</td>
                 <td>0,00 ₽</td>
             </tr>
-            <tr>
+            <tr data-level=0>
                 <th scope="row" class="font-weight-max cursor text-left">
-                    <div class="pp">
+                    <div class="arrow_container">
                         <span class="arrow"></span>
                     </div>
                     Химия
@@ -387,12 +387,12 @@
                 <td>0,00 ₽</td>
                 <td>0,00 ₽</td>
             </tr>
-            <tr>
+            <tr data-level=2>
                 <th scope="row" class="font-weight-min cursor text-left">Краска
                     <div class="delete">
-                        <svg class="del" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.15631 11.6417L4.35839 12.8437L7.99999 9.20213L11.6416 12.8437L12.8437 11.6417L9.20208 8.00005L12.8437 4.35845L11.6416 3.15637L7.99999 6.79797L4.3584 3.15637L3.15631 4.35845L6.79791 8.00005L3.15631 11.6417Z" fill="black" fill-opacity="0.4"/>
-                        </svg>
+                        <div class="delete_container del">
+
+                        </div>
                     </div>
                 </th>
                 <td>–70 000,00 ₽</td>
@@ -409,12 +409,12 @@
                 <td>0,00 ₽</td>
                 <td>0,00 ₽</td>
             </tr>
-            <tr>
+            <tr data-level=2>
                 <th scope="row" class="font-weight-min cursor text-left">Лак
                     <div class="delete">
-                        <svg class="del" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.15631 11.6417L4.35839 12.8437L7.99999 9.20213L11.6416 12.8437L12.8437 11.6417L9.20208 8.00005L12.8437 4.35845L11.6416 3.15637L7.99999 6.79797L4.3584 3.15637L3.15631 4.35845L6.79791 8.00005L3.15631 11.6417Z" fill="black" fill-opacity="0.4"/>
-                        </svg>
+                        <div class="delete_container del">
+
+                        </div>
                     </div>
                 </th>
                 <td>–50 000,00 ₽</td>
@@ -431,12 +431,12 @@
                 <td>0,00 ₽</td>
                 <td>0,00 ₽</td>
             </tr>
-            <tr>
+            <tr data-level=0>
                 <th scope="row" class="font-weight-min cursor text-left">Аренда инструмента
                     <div class="delete">
-                        <svg class="del" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.15631 11.6417L4.35839 12.8437L7.99999 9.20213L11.6416 12.8437L12.8437 11.6417L9.20208 8.00005L12.8437 4.35845L11.6416 3.15637L7.99999 6.79797L4.3584 3.15637L3.15631 4.35845L6.79791 8.00005L3.15631 11.6417Z" fill="black" fill-opacity="0.4"/>
-                        </svg>
+                        <div class="delete_container del">
+
+                        </div>
                     </div>
                 </th>
                 <td>–200 000,00 ₽</td>
@@ -453,12 +453,12 @@
                 <td>0,00 ₽</td>
                 <td>0,00 ₽</td>
             </tr>
-            <tr>
+            <tr data-level=0>
                 <th scope="row" class="font-weight-min cursor text-left">Аренда офиса
                     <div class="delete">
-                        <svg class="del" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.15631 11.6417L4.35839 12.8437L7.99999 9.20213L11.6416 12.8437L12.8437 11.6417L9.20208 8.00005L12.8437 4.35845L11.6416 3.15637L7.99999 6.79797L4.3584 3.15637L3.15631 4.35845L6.79791 8.00005L3.15631 11.6417Z" fill="black" fill-opacity="0.4"/>
-                        </svg>
+                        <div class="delete_container del">
+
+                        </div>
                     </div>
                 </th>
                 <td>–200 000,00 ₽</td>
@@ -475,12 +475,12 @@
                 <td>0,00 ₽</td>
                 <td>0,00 ₽</td>
             </tr>
-            <tr>
+            <tr data-level=0>
                 <th scope="row" class="font-weight-min cursor text-left">Коммунальные платежи
                     <div class="delete">
-                        <svg class="del" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.15631 11.6417L4.35839 12.8437L7.99999 9.20213L11.6416 12.8437L12.8437 11.6417L9.20208 8.00005L12.8437 4.35845L11.6416 3.15637L7.99999 6.79797L4.3584 3.15637L3.15631 4.35845L6.79791 8.00005L3.15631 11.6417Z" fill="black" fill-opacity="0.4"/>
-                        </svg>
+                        <div class="delete_container del">
+
+                        </div>
                     </div>
                 </th>
                 <td>–30 000,00 ₽</td>
@@ -497,12 +497,12 @@
                 <td>0,00 ₽</td>
                 <td>0,00 ₽</td>
             </tr>
-            <tr>
+            <tr data-level=0>
                 <th scope="row" class="font-weight-min cursor text-left">Транспорт
                     <div class="delete">
-                        <svg class="del" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.15631 11.6417L4.35839 12.8437L7.99999 9.20213L11.6416 12.8437L12.8437 11.6417L9.20208 8.00005L12.8437 4.35845L11.6416 3.15637L7.99999 6.79797L4.3584 3.15637L3.15631 4.35845L6.79791 8.00005L3.15631 11.6417Z" fill="black" fill-opacity="0.4"/>
-                        </svg>
+                        <div class="delete_container del">
+
+                        </div>
                     </div>
                 </th>
                 <td>–15 000,00 ₽</td>
@@ -519,7 +519,7 @@
                 <td>0,00 ₽</td>
                 <td>0,00 ₽</td>
             </tr>
-            <tr class="table-active header_tr">
+            <tr data-level=0 class="table-active header_tr">
                 <th scope="row" class="font-weight-max text-left">Сальдо</th>
                 <td class="font-weight-max">3 270 000,00 ₽</td>
                 <td class="font-weight-max">3 270 000,00 ₽</td>
@@ -538,9 +538,9 @@
             <tr id="row_template">
                 <th scope="row" class="font-weight-min cursor text-left">
                     <div class="delete">
-                        <svg class="del" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.15631 11.6417L4.35839 12.8437L7.99999 9.20213L11.6416 12.8437L12.8437 11.6417L9.20208 8.00005L12.8437 4.35845L11.6416 3.15637L7.99999 6.79797L4.3584 3.15637L3.15631 4.35845L6.79791 8.00005L3.15631 11.6417Z" fill="black" fill-opacity="0.4"/>
-                        </svg>
+                        <div class="delete_container del">
+
+                        </div>
                     </div>
                 </th>
                 <td>0,00 ₽</td>

@@ -24,6 +24,15 @@ th:hover > .delete {
     display: inline-block;
     float: right;
 }
+.delete_container {
+    width: 16px;
+    height: 16px;
+    background: url("./img/delete.svg");
+    margin-top: 4px;
+}
+.delete_container:hover {
+    background: url("./img/delete_active.svg");
+}
 svg {
     cursor: pointer;
 }
@@ -68,7 +77,7 @@ th {
 .float_right.folder:hover {
     background: url("img/folder_active.svg");
 }
-.pp {
+.arrow_container {
     width: 8px;
     height: 8px;
     background: url("img/arrow.svg");
@@ -78,7 +87,7 @@ th {
 .budget {
     display: inline-block;
 }
-.oo {
+.arrow_sorting {
     width: 16px;
     height: 16px;
     background: url("img/sorting.svg");
@@ -86,7 +95,7 @@ th {
     display: inline-block;
     vertical-align: middle;
 }
-.oo:hover {
+.arrow_sorting:hover {
     background: url("img/sorting_active.svg");
 }
 td.active {
