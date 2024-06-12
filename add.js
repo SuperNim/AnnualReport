@@ -15,6 +15,10 @@ for (var tr of trList) {
             }
         })
     }
+    var level = tr.dataset.level
+    var padding = 32
+    padding = 32 + 16*level
+    tr.children[0].style.paddingLeft = padding + 'px'
 }
 document.querySelectorAll('td').forEach(td => {
     if (!td.parentElement.classList.contains("header_tr")) {
@@ -50,6 +54,8 @@ function plusRow (e) {
     tbody.appendChild(row)
     del = row.querySelector(".del")
     del.addEventListener('click', deleteRow)
+    console.log(row.children[0])
+    row.children[0].contentEditable = 'true';
     tr.after(row)
 }
 
