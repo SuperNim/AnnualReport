@@ -1,0 +1,155 @@
+.container-fluid {
+    margin-left: 40px;
+}
+.cursor {
+    cursor: pointer;
+}
+.Table_of_contents {
+    text-align: left;
+    font-weight: 700;
+    font-size: 27px;
+    margin-top: 40px;
+}
+table {
+    margin-top: 30px;
+}
+.Heading {
+    font-weight: 700;
+    font-size: 13px;
+}
+.delete {
+    display: none;
+    width: 16px;
+    height: 16px;
+    background: url(".././img/delete.svg");
+    position: absolute;
+    right: 4px;
+    top: 12px;
+}
+th:hover > .delete {
+    display: inline-block;
+    vertical-align: center;
+}
+.delete:hover {
+    background: url(".././img/delete_active.svg");
+}
+svg {
+    cursor: pointer;
+}
+.font-weight-min {
+    font-weight: 400;
+    font-size: 14px;
+}
+td {
+    min-width: 130px;
+    min-height: 38px;
+    font-weight: 400;
+    font-size: 14px;
+}
+th {
+    min-height: 38px;
+}
+.font-weight-max {
+    font-weight: 700;
+    font-size: 14px;
+}
+.text-left {
+    max-width: 250px;
+    min-height: 38px;
+    text-align: left;
+}
+.float_right {
+    float: right;
+}
+.plus {
+    width: 24px;
+    height: 24px;
+    background: url(".././img/plus.svg");
+    position: absolute;
+    right: 4px;
+    top: 8px;
+}
+.float_right.plus:hover {
+    background: url(".././img/plus_active.svg");
+}
+.folder {
+    width: 24px;
+    height: 24px;
+    background: url("../img/folder.svg");
+    position: absolute;
+    right: 30px;
+    top: 8px;
+}
+.float_right.folder:hover {
+    background: url("../img/folder_active.svg");
+}
+.arrow {
+    width: 8px;
+    height: 8px;
+    background: url("../img/arrow.svg");
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+.budget {
+    display: inline-block;
+}
+.arrow_sorting {
+    width: 16px;
+    height: 16px;
+    background: url("../img/sorting.svg");
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+}
+.arrow_sorting:hover {
+    background: url("../img/sorting_active.svg");
+}
+td.active {
+    background: white !important;
+}
+td .field:focus {
+    outline: none;
+}
+th .field:focus {
+    outline: none;
+}
+#row_template {
+    display: none;
+}
+table tr .field {
+    width: 205px;
+    display: inline-block;
+    height: 38px;
+    padding: 9px 0;
+}
+table tr .field:focus{
+    outline: none;
+}
+table th .field:focus{
+    outline: none;
+}
+table .header_tr th,table .header_tr td {
+    min-width: 205px;
+    height: 38px;
+    padding: 9px!important;
+}
+table tr td:has(.field:focus) {
+    --bs-table-bg-state: white!important;
+}
+table tr th:has(.field:focus) {
+    --bs-table-bg-state: white!important;
+}
+table tr td {
+    padding: 0!important;
+    position: relative;
+}
+table tr th {
+    padding: 0!important;
+    min-width: 250px;
+    position: relative;
+}
+table tr:hover {
+    --bs-table-bg-state: #e5e5e5;
+}
