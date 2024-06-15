@@ -91,6 +91,7 @@ th {
     position: absolute;
     top: 15px;
     left: 15px;
+    transform: rotate(90deg);
 }
 .budget {
     display: inline-block;
@@ -118,6 +119,9 @@ th .field:focus {
 #row_template {
     display: none;
 }
+#folder_template {
+    display: none;
+}
 table tr .field {
     width: 205px;
     display: inline-block;
@@ -134,6 +138,7 @@ table .header_tr th,table .header_tr td {
     min-width: 205px;
     height: 38px;
     padding: 9px!important;
+    padding-left: 32px!important;
 }
 table tr td:has(.field:focus) {
     --bs-table-bg-state: white!important;
@@ -152,4 +157,8 @@ table tr th {
 }
 table tr:hover {
     --bs-table-bg-state: #e5e5e5;
+}
+
+.arrow_right {
+    transform: rotate(0deg) !important;
 }
