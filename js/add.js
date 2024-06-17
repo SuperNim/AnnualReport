@@ -1,23 +1,15 @@
 trList = document.getElementsByTagName('tr')
 fieldList = document.querySelectorAll("td .field")
-for(let field of fieldList){
-    field.addEventListener("focus", removeR)
-    field.addEventListener("blur", addR)
-    field.addEventListener("keypress", filterInput)
+attachEventsToFieldList(fieldList)
+function attachEventsToFieldList(fieldList){
+    for(let field of fieldList) {
+        field.addEventListener("focus", removeR)
+        field.addEventListener("blur", addR)
+        field.addEventListener("keypress", filterInput)
+    }
 }
 
 for (let tr of trList) {
-    if (!tr.classList.contains("header_tr")) {
-        tr.addEventListener('click', (e) => {
-            e.target.parentElement.parentElement
-                .setAttribute("style", "--bs-table-bg-state: #ffffff;")
-        })
-        tr.addEventListener('mouseleave', (e) => {
-            e.target
-                .removeAttribute("style")
-        })
-    }
-
     applyPadding(tr)
 }
 
@@ -27,8 +19,12 @@ function applyPadding(tr){
         level = 0;
     let padding = 32
     padding = 32 + 16*level
+    let left = 15 + 16*level
     if(tr.children[0].querySelector(".field")) {
-        tr.children[0].querySelector(".field").setAttribute("style", "padding-left: " + padding + "px!important")
+        tr.children[0].querySelector(".field").setAttribute("style", "padding-left: " + padding + "px")
+    }
+    if(tr.children[0].querySelector(".arrow")) {
+        tr.children[0].querySelector(".arrow").setAttribute("style", "left: " + left + "px")
     }
 }
 
@@ -47,8 +43,8 @@ for (let plus of plus_list) {
 for (let folder of folder_list) {
     folder.addEventListener('click', addFolder)
 }
-var row_template = document.getElementById('row_template')
-var folder_template = document.getElementById('folder_template')
+const row_template = document.getElementById('row_template');
+const folder_template = document.getElementById('folder_template');
 var tbody = document.getElementById('tbody')
 function addRow (e) {
     tr = e.target.parentElement.parentElement
@@ -59,6 +55,8 @@ function addRow (e) {
     let level = tr.dataset.level
     row.dataset.level = parseInt(level) + 1
     applyPadding(row)
+    let fieldList = row.querySelectorAll("td .field")
+    attachEventsToFieldList(fieldList)
     tr.after(row)
 }
 function addFolder(e){
@@ -74,10 +72,12 @@ function addFolder(e){
     let level = tr.dataset.level
     row.dataset.level = parseInt(level) + 1
     applyPadding(row)
+    let fieldList = row.querySelectorAll("td .field")
+    attachEventsToFieldList(fieldList)
     tr.after(row)
 }
 
-var arrows = document.getElementsByClassName("arrow")
+const arrows = document.getElementsByClassName("arrow");
 for(let arrow of arrows){
     arrow.addEventListener("click", toggleExpandCollapse)
 }
@@ -109,26 +109,33 @@ function collapse(tr){
         tr.style.display = "none"
     }
 }
+function getNumberFromField(field){
+    let number =  field.innerText.slice(0, -2).replaceAll(/\s/g, '').replaceAll(",", ".")
+    let result = parseFloat(number).toFixed(2)
+    return result
+}
+
+function getStringFromNumber(number){
+    let num = Math.floor(parseFloat(number)).toLocaleString()
+    let non_integer_part = parseFloat(number).toFixed(2).toString().slice(-3)
+    return (num+non_integer_part).replace(".", ",") + " ₽"
+}
 
 function removeR(e){
-    let a =  e.target.innerText.slice(0, -2).replaceAll(/\s/g, '').replaceAll(",", ".")
-    console.log(a);
-    e.target.innerText = parseFloat(
-        a
-    ).toFixed(2)
+    e.target.innerText = getNumberFromField(e.target)
+    calcTable()
 }
 function addR(e){
-    let num = Math.floor(parseFloat(e.target.innerText)).toLocaleString();
-    let non_integer_part = parseFloat(e.target.innerText).toFixed(2).toString().slice(-3);
-    e.target.innerText = (num+non_integer_part).replace(".", ",") + " ₽"
+    e.target.innerText = getStringFromNumber(e.target.innerText)
 }
 
 function filterInput(e){
     let theEvent = e || window.event
+    let key
     if (theEvent.type === 'paste') {
-        var key = event.clipboardData.getData('text/plain')
+        key = event.clipboardData.getData('text/plain')
     } else {
-        var key = theEvent.keyCode || theEvent.which
+        key = theEvent.keyCode || theEvent.which
         key = String.fromCharCode(key)
     }
     let regex = /[0-9]|\./
@@ -138,5 +145,69 @@ function filterInput(e){
             theEvent.preventDefault()
             return false
         }
+    }
+}
+
+let sort_button = document.getElementById("sort")
+sort_button.addEventListener("click", changeSortingTypeAndSort)
+
+function changeSortingTypeAndSort(e){
+    if(e.target.classList.contains("arrow_sorting_number")){
+        e.target.classList.remove("arrow_sorting_number")
+        e.target.classList.add("arrow_sorting_az")
+        //sortAZ()
+    } else {
+        e.target.classList.remove("arrow_sorting_az")
+        e.target.classList.add("arrow_sorting_number")
+        //sortNumber()
+    }
+}
+
+function sortAZ(){
+    console.log("az")
+
+    let trs = document.getElementsByTagName("tr")
+    console.log(trs);
+    tbody.appendChild(trs[0]);
+    for(let i = trs.length-1; i > 0; i--){
+        tbody.appendChild(trs[i])
+    }
+}
+
+function sortNumber(){
+    console.log("number")
+}
+
+
+calcTable()
+function calcTable(){
+
+    for(const [tr_index, tr] of Array.from(tbody.children).entries()){
+        if(tr_index == 0)
+            continue
+        let sum = 0
+
+        for(const [index, td] of Array.from(tr.children).entries()) {
+            if(index < 2)
+                continue
+            let el
+            if (td.children.length > 0 && td.children[0].classList.contains("field")) {
+                el = td.children[0]
+            } else {
+                el = td
+            }
+            let number = parseFloat(getNumberFromField(el))
+            sum += number
+        }
+        console.log(sum);
+        let result_td = tr.children[1]
+        let el
+        if (result_td.children.length > 0 && result_td.children[0].classList.contains("field")) {
+            el = result_td.children[0]
+        } else {
+            el = result_td
+        }
+        el.innerHTML = getStringFromNumber(sum)
+
     }
 }

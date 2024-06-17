@@ -4,7 +4,7 @@
 .cursor {
     cursor: pointer;
 }
-.Table_of_contents {
+.title {
     text-align: left;
     font-weight: 700;
     font-size: 27px;
@@ -13,7 +13,7 @@
 table {
     margin-top: 30px;
 }
-.Heading {
+.header_th {
     font-weight: 700;
     font-size: 13px;
 }
@@ -91,7 +91,7 @@ th {
     position: absolute;
     top: 15px;
     left: 15px;
-    transform: rotate(90deg);
+    transform: rotate(0deg);
 }
 .budget {
     display: inline-block;
@@ -99,53 +99,71 @@ th {
 .arrow_sorting {
     width: 16px;
     height: 16px;
-    background: url("../img/sorting.svg");
     cursor: pointer;
     display: inline-block;
     vertical-align: middle;
 }
-.arrow_sorting:hover {
+.arrow_sorting_number {
+    background: url("../img/sorting.svg");
+}
+.arrow_sorting_number:hover {
     background: url("../img/sorting_active.svg");
+}
+.arrow_sorting_az {
+    background: url("../img/sorting_az.svg");
+}
+.arrow_sorting_az:hover {
+    background: url("../img/sorting_az_active.svg");
 }
 td.active {
     background: white !important;
 }
-td .field:focus {
-    outline: none;
-}
-th .field:focus {
-    outline: none;
-}
+
 #row_template {
     display: none;
 }
 #folder_template {
     display: none;
 }
-table tr .field {
-    width: 205px;
+.field {
+    width: 197px;
     display: inline-block;
     height: 38px;
     padding: 9px 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.field:focus {
+    outline: none;
+    z-index: 10;
+    width: 100%;
+    text-wrap: pretty;
+    background-color: white;
+    height: auto;
+    overflow : visible!important;
+}
+.field:focus ~ .float_right{
+    display: none;
+}
+th .field:focus {
+    outline: none;
 }
 table tr .field:focus{
     outline: none;
 }
-table th .field:focus{
-    outline: none;
-}
-table .header_tr th,table .header_tr td {
+table .header_tr th, table .header_tr td {
     min-width: 205px;
     height: 38px;
     padding: 9px!important;
+}
+table .header_tr th:first-child {
     padding-left: 32px!important;
 }
-table tr td:has(.field:focus) {
+table tr:has(td .field:focus, th .field:focus) {
     --bs-table-bg-state: white!important;
 }
-table tr th:has(.field:focus) {
-    --bs-table-bg-state: white!important;
-}
+
 table tr td {
     padding: 0!important;
     position: relative;
@@ -155,10 +173,10 @@ table tr th {
     min-width: 250px;
     position: relative;
 }
-table tr:hover {
+table tr:not(:first-child):hover {
     --bs-table-bg-state: #e5e5e5;
 }
 
 .arrow_right {
-    transform: rotate(0deg) !important;
+    transform: rotate(90deg) !important;
 }
