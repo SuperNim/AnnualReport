@@ -9,560 +9,563 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/add.js" defer></script>
+    <script src="js/sort.js" defer></script>
+    <script src="js/main.js" defer></script>
 </head>
 <body>
     <div class="container-fluid text-center">
         <div class="title">
             Бюджет на 2024 год
         </div>
-        <table id="table" class="table table-bordered text-nowrap">
-            <thead>
-            <tr class="header_tr not_calc" style="vertical-align: middle;height: 45px">
-                <th scope="col" class="header_th"></th>
-                <th scope="col" class="header_th">Итог</th>
-                <th scope="col" class="header_th">Январь 2024</th>
-                <th scope="col" class="header_th">Февраль 2024</th>
-                <th scope="col" class="header_th">Март 2024</th>
-                <th scope="col" class="header_th">Апрель 2024</th>
-                <th scope="col" class="header_th">Май 2024</th>
-                <th scope="col" class="header_th">Июнь 2024</th>
-                <th scope="col" class="header_th">Июль 2024</th>
-                <th scope="col" class="header_th">Август 2024</th>
-                <th scope="col" class="header_th">Сентябрь 2024</th>
-                <th scope="col" class="header_th">Октябрь 2024</th>
-                <th scope="col" class="header_th">Ноябрь 2024</th>
-                <th scope="col" class="header_th">Декабрь 2024</th>
-            </tr>
-            </thead>
-            <tbody id="tbody">
-            <tr class="table-active header_tr  not_calc">
-                <th scope="row" class="font-weight-max text-left">
-                        Бюджет
-                    <div id="sort" class="arrow_sorting arrow_sorting_number"></div>
-                </th>
-                <td class="font-weight-max">План</td>
-                <td class="font-weight-max">План</td>
-                <td class="font-weight-max">План</td>
-                <td class="font-weight-max">План</td>
-                <td class="font-weight-max">План</td>
-                <td class="font-weight-max">План</td>
-                <td class="font-weight-max">План</td>
-                <td class="font-weight-max">План</td>
-                <td class="font-weight-max">План</td>
-                <td class="font-weight-max">План</td>
-                <td class="font-weight-max">План</td>
-                <td class="font-weight-max">План</td>
-                <td class="font-weight-max">План</td>
-            </tr>
-            <tr id="income" data-level="-1" class="table-active header_tr">
-                <th scope="row" class="font-weight-max cursor text-left">Бюджет доходов
-                    <span class="float_right plus"></span>
-                    <span class="float_right folder"></span>
-                </th>
-                <td class="font-weight-max">0,00 ₽</td>
-                <td class="font-weight-max">0,00 ₽</td>
-                <td class="font-weight-max">0,00 ₽</td>
-                <td class="font-weight-max">0,00 ₽</td>
-                <td class="font-weight-max">0,00 ₽</td>
-                <td class="font-weight-max">0,00 ₽</td>
-                <td class="font-weight-max">0,00 ₽</td>
-                <td class="font-weight-max">0,00 ₽</td>
-                <td class="font-weight-max">0,00 ₽</td>
-                <td class="font-weight-max">0,00 ₽</td>
-                <td class="font-weight-max">0,00 ₽</td>
-                <td class="font-weight-max">0,00 ₽</td>
-                <td class="font-weight-max">0,00 ₽</td>
-            </tr>
-            <tr data-level=0>
-                <th class="font-weight-min cursor text-left">
-                    <div class="field" contenteditable="true">
-                        Разработка проекта
-                    </div>
-                    <div class="delete"></div>
-                </th>
-                <td><div class="field">2 000 000,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">11,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">1,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">2,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">3,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">4,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">5,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">6,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">7,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">8,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">9,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">10,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">20,00 ₽</div></td>
-            </tr>
-            <tr data-level=0>
-                <th scope="row" class="font-weight-min cursor text-left">
-                    <div class="field" contenteditable="true">
-                        Ремонтные работы
-                    </div>
-                    <div class="delete"></div>
-                </th>
-                <td><div class="field">1 500 000,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">1 500 000,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-            </tr>
-            <tr data-level=0>
-                <th scope="row" class="font-weight-max cursor text-left">
-                    <div class="arrow"></div>
-                    <div class="field" contenteditable="true">
-                        Услуги Услуги Услуги Услуги Услуги
-                    </div>
-                    <span class="float_right plus"></span>
-                    <span class="float_right folder"></span>
-                </th>
-                <td><div class="field">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-            </tr>
-            <tr data-level=1>
-                <th scope="row" class="font-weight-min cursor text-left">
-                    <div class="field" contenteditable="true">
-                        Аудит и консалтинг
-                    </div>
-                    <div class="delete"></div>
-                </th>
-                <td><div class="field">250 000,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">250 000,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">123,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">456,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-            </tr>
-            <tr data-level=1>
-                <th scope="row" class="font-weight-min cursor text-left">
-                    <div class="field" contenteditable="true">
-                        Работа электрика
-                    </div>
-                    <div class="delete"></div>
-                </th>
-                <td><div class="field">200 000,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">200 000,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">9000,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">44,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-            </tr>
-            <tr data-level=1>
-                <th scope="row" class="font-weight-min cursor text-left">
-                    <div class="field" contenteditable="true">
-                        Малярные работы
-                    </div>
-                    <div class="delete"></div>
-                </th>
-                <td><div class="field">50 000,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">50 000,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-            </tr>
-            <tr data-level=1>
-                <th scope="row" class="font-weight-min cursor text-left">
-                    <div class="field" contenteditable="true">
-                        Доставка
-                    </div>
-                    <div class="delete"></div>
-                </th>
-                <td><div class="field">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-            </tr>
-            <tr id="expenses" data-level=-1 class="table-active header_tr">
-                <th scope="row" class="font-weight-max cursor text-left">Бюджет расходов
-                    <span class="float_right plus"></span>
-                    <span class="float_right folder"></span>
-                </th>
-                <td class="font-weight-max">0,00 ₽</td>
-                <td class="font-weight-max">0,00 ₽</td>
-                <td class="font-weight-max">0,00 ₽</td>
-                <td class="font-weight-max">0,00 ₽</td>
-                <td class="font-weight-max">0,00 ₽</td>
-                <td class="font-weight-max">0,00 ₽</td>
-                <td class="font-weight-max">0,00 ₽</td>
-                <td class="font-weight-max">0,00 ₽</td>
-                <td class="font-weight-max">0,00 ₽</td>
-                <td class="font-weight-max">0,00 ₽</td>
-                <td class="font-weight-max">0,00 ₽</td>
-                <td class="font-weight-max">0,00 ₽</td>
-                <td class="font-weight-max">0,00 ₽</td>
-            </tr>
-            <tr data-level=0>
-                <th scope="row" class="font-weight-max cursor text-left">
-                    <div class="arrow"></div>
-                    <div class="field" contenteditable="true">
-                        Материалы
-                    </div>
-                    <span class="float_right plus"></span>
-                    <span class="float_right folder"></span>
-                </th>
-                <td><div class="field">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-            </tr>
-            <tr data-level=1>
-                <th scope="row" class="font-weight-max cursor text-left">
-                    <div class="arrow"></div>
-                    <div class="field" contenteditable="true">
-                        Мебель
-                    </div>
-                    <span class="float_right plus"></span>
-                    <span class="float_right folder"></span>
-                </th>
-                <td><div class="field">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-            </tr>
-            <tr data-level=2>
-                <th scope="row" class="font-weight-min cursor text-left">
-                    <div class="field" contenteditable="true">
-                        Дерево
-                    </div>
-                    <div class="delete"></div>
-                </th>
-                <td><div class="field">-100 000,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">-100 000,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-            </tr>
-            <tr data-level=2>
-                <th scope="row" class="font-weight-min cursor text-left">
-                    <div class="field" contenteditable="true">
-                        Стекло
-                    </div>
-                    <div class="delete"></div>
-                </th>
-                <td><div class="field">-50 000,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">-50 000,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-            </tr>
-            <tr data-level=2>
-                <th scope="row" class="font-weight-min cursor text-left">
-                    <div class="field" contenteditable="true">
-                        Фурнитура
-                    </div>
-                    <div class="delete"></div>
-                </th>
-                <td><div class="field">-30 000,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">-30 000,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-            </tr>
-            <tr data-level=1>
-                <th scope="row" class="font-weight-max cursor text-left">
-                    <div class="arrow"></div>
-                    <div class="field" contenteditable="true">
-                        Химия
-                    </div>
-                    <span class="float_right plus"></span>
-                    <span class="float_right folder"></span>
-                </th>
-                <td><div class="field">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-            </tr>
-            <tr data-level=2>
-                <th scope="row" class="font-weight-min cursor text-left">
-                    <div class="field" contenteditable="true">
-                        Краска
-                    </div>
-                    <div class="delete"></div>
-                </th>
-                <td><div class="field">-70 000,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">-70 000,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-            </tr>
-            <tr data-level=2>
-                <th scope="row" class="font-weight-min cursor text-left">
-                    <div class="field" contenteditable="true">
-                        Лак
-                    </div>
-                    <div class="delete"></div>
-                </th>
-                <td><div class="field">-50 000,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">-50 000,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-            </tr>
-            <tr data-level=0>
-                <th scope="row" class="font-weight-min cursor text-left">
-                    <div class="field" contenteditable="true">
-                        Аренда инструмента
-                    </div>
-                    <div class="delete"></div>
-                </th>
-                <td><div class="field">-200 000,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">-200 000,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-            </tr>
-            <tr data-level=0>
-                <th scope="row" class="font-weight-min cursor text-left">
-                    <div class="field" contenteditable="true">
-                        Аренда офиса
-                    </div>
-                    <div class="delete"></div>
-                </th>
-                <td><div class="field">-200 000,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">-200 000,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-            </tr>
-            <tr data-level=0>
-                <th scope="row" class="font-weight-min cursor text-left">
-                    <div class="field" contenteditable="true">
-                        Коммунальные платежи
-                    </div>
-                    <div class="delete"></div>
-                </th>
-                <td><div class="field">-30 000,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">-30 000,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-            </tr>
-            <tr data-level=0>
-                <th scope="row" class="font-weight-min cursor text-left">
-                    <div class="field" contenteditable="true">
-                        Транспорт
-                    </div>
-                    <div class="delete"></div>
-                </th>
-                <td><div class="field">-15 000,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">-15 000,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-            </tr>
-            <tr id="balance" data-level=-1 class="table-active header_tr not_calc">
-                <th scope="row" class="font-weight-max text-left">Сальдо</th>
-                <td class="font-weight-max">0,00 ₽</td>
-                <td class="font-weight-max">0,00 ₽</td>
-                <td class="font-weight-max">0,00 ₽</td>
-                <td class="font-weight-max">0,00 ₽</td>
-                <td class="font-weight-max">0,00 ₽</td>
-                <td class="font-weight-max">0,00 ₽</td>
-                <td class="font-weight-max">0,00 ₽</td>
-                <td class="font-weight-max">0,00 ₽</td>
-                <td class="font-weight-max">0,00 ₽</td>
-                <td class="font-weight-max">0,00 ₽</td>
-                <td class="font-weight-max">0,00 ₽</td>
-                <td class="font-weight-max">0,00 ₽</td>
-                <td class="font-weight-max">0,00 ₽</td>
-            </tr>
-            <tr id="row_template" class="not_calc">
-                <th class="font-weight-min cursor text-left">
-                    <div class="field" contenteditable="true">
+        <div id="wrapper">
+            <table id="table" class="table table-bordered text-nowrap">
+                <thead>
+                <tr class="header_tr not_calc" style="vertical-align: middle;height: 45px">
+                    <th scope="col" class="header_th"></th>
+                    <th scope="col" class="header_th">Итог</th>
+                    <th scope="col" class="header_th">Январь 2024</th>
+                    <th scope="col" class="header_th">Февраль 2024</th>
+                    <th scope="col" class="header_th">Март 2024</th>
+                    <th scope="col" class="header_th">Апрель 2024</th>
+                    <th scope="col" class="header_th">Май 2024</th>
+                    <th scope="col" class="header_th">Июнь 2024</th>
+                    <th scope="col" class="header_th">Июль 2024</th>
+                    <th scope="col" class="header_th">Август 2024</th>
+                    <th scope="col" class="header_th">Сентябрь 2024</th>
+                    <th scope="col" class="header_th">Октябрь 2024</th>
+                    <th scope="col" class="header_th">Ноябрь 2024</th>
+                    <th scope="col" class="header_th">Декабрь 2024</th>
+                </tr>
+                </thead>
+                <tbody id="tbody">
+                <tr class="table-active header_tr  not_calc">
+                    <th scope="row" class="font_weight_max text_left">
+                            Бюджет
+                        <div id="sort" class="arrow_sorting arrow_sorting_number"></div>
+                    </th>
+                    <td class="font_weight_max">План</td>
+                    <td class="font_weight_max">План</td>
+                    <td class="font_weight_max">План</td>
+                    <td class="font_weight_max">План</td>
+                    <td class="font_weight_max">План</td>
+                    <td class="font_weight_max">План</td>
+                    <td class="font_weight_max">План</td>
+                    <td class="font_weight_max">План</td>
+                    <td class="font_weight_max">План</td>
+                    <td class="font_weight_max">План</td>
+                    <td class="font_weight_max">План</td>
+                    <td class="font_weight_max">План</td>
+                    <td class="font_weight_max">План</td>
+                </tr>
+                <tr id="income" data-level="-1" class="table-active header_tr">
+                    <th scope="row" class="font_weight_max cursor text_left">Бюджет доходов
+                        <span class="float_right plus"></span>
+                        <span class="float_right folder"></span>
+                    </th>
+                    <td class="font_weight_max">0,00 ₽</td>
+                    <td class="font_weight_max">0,00 ₽</td>
+                    <td class="font_weight_max">0,00 ₽</td>
+                    <td class="font_weight_max">0,00 ₽</td>
+                    <td class="font_weight_max">0,00 ₽</td>
+                    <td class="font_weight_max">0,00 ₽</td>
+                    <td class="font_weight_max">0,00 ₽</td>
+                    <td class="font_weight_max">0,00 ₽</td>
+                    <td class="font_weight_max">0,00 ₽</td>
+                    <td class="font_weight_max">0,00 ₽</td>
+                    <td class="font_weight_max">0,00 ₽</td>
+                    <td class="font_weight_max">0,00 ₽</td>
+                    <td class="font_weight_max">0,00 ₽</td>
+                </tr>
+                <tr data-level=0>
+                    <th class="font-weight-min cursor text_left">
+                        <div class="field" contenteditable="true">
+                            Разработка проекта
+                        </div>
+                        <div class="delete"></div>
+                    </th>
+                    <td><div class="field">2 000 000,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">2 000 000,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                </tr>
+                <tr data-level=0>
+                    <th scope="row" class="font-weight-min cursor text_left">
+                        <div class="field" contenteditable="true">
+                            Ремонтные работы
+                        </div>
+                        <div class="delete"></div>
+                    </th>
+                    <td><div class="field">1 500 000,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">1 500 000,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                </tr>
+                <tr data-level=0>
+                    <th scope="row" class="font_weight_max cursor text_left">
+                        <div class="arrow"></div>
+                        <div class="field" contenteditable="true">
+                            Услуги Услуги Услуги Услуги Услуги
+                        </div>
+                        <span class="float_right plus"></span>
+                        <span class="float_right folder"></span>
+                    </th>
+                    <td><div class="field">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                </tr>
+                <tr data-level=1>
+                    <th scope="row" class="font-weight-min cursor text_left">
+                        <div class="field" contenteditable="true">
+                            Аудит и консалтинг
+                        </div>
+                        <div class="delete"></div>
+                    </th>
+                    <td><div class="field">250 000,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">250 000,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                </tr>
+                <tr data-level=1>
+                    <th scope="row" class="font-weight-min cursor text_left">
+                        <div class="field" contenteditable="true">
+                            Работа электрика
+                        </div>
+                        <div class="delete"></div>
+                    </th>
+                    <td><div class="field">200 000,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">200 000,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                </tr>
+                <tr data-level=1>
+                    <th scope="row" class="font-weight-min cursor text_left">
+                        <div class="field" contenteditable="true">
+                            Малярные работы
+                        </div>
+                        <div class="delete"></div>
+                    </th>
+                    <td><div class="field">50 000,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">50 000,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                </tr>
+                <tr data-level=1>
+                    <th scope="row" class="font-weight-min cursor text_left">
+                        <div class="field" contenteditable="true">
+                            Доставка
+                        </div>
+                        <div class="delete"></div>
+                    </th>
+                    <td><div class="field">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                </tr>
+                <tr id="expenses" data-level=-1 class="table-active header_tr">
+                    <th scope="row" class="font_weight_max cursor text_left">Бюджет расходов
+                        <span class="float_right plus"></span>
+                        <span class="float_right folder"></span>
+                    </th>
+                    <td class="font_weight_max">0,00 ₽</td>
+                    <td class="font_weight_max">0,00 ₽</td>
+                    <td class="font_weight_max">0,00 ₽</td>
+                    <td class="font_weight_max">0,00 ₽</td>
+                    <td class="font_weight_max">0,00 ₽</td>
+                    <td class="font_weight_max">0,00 ₽</td>
+                    <td class="font_weight_max">0,00 ₽</td>
+                    <td class="font_weight_max">0,00 ₽</td>
+                    <td class="font_weight_max">0,00 ₽</td>
+                    <td class="font_weight_max">0,00 ₽</td>
+                    <td class="font_weight_max">0,00 ₽</td>
+                    <td class="font_weight_max">0,00 ₽</td>
+                    <td class="font_weight_max">0,00 ₽</td>
+                </tr>
+                <tr data-level=0>
+                    <th scope="row" class="font_weight_max cursor text_left">
+                        <div class="arrow"></div>
+                        <div class="field" contenteditable="true">
+                            Материалы
+                        </div>
+                        <span class="float_right plus"></span>
+                        <span class="float_right folder"></span>
+                    </th>
+                    <td><div class="field">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                </tr>
+                <tr data-level=1>
+                    <th scope="row" class="font_weight_max cursor text_left">
+                        <div class="arrow"></div>
+                        <div class="field" contenteditable="true">
+                            Мебель
+                        </div>
+                        <span class="float_right plus"></span>
+                        <span class="float_right folder"></span>
+                    </th>
+                    <td><div class="field">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                </tr>
+                <tr data-level=2>
+                    <th scope="row" class="font-weight-min cursor text_left">
+                        <div class="field" contenteditable="true">
+                            Дерево
+                        </div>
+                        <div class="delete"></div>
+                    </th>
+                    <td><div class="field">-100 000,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">-100 000,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                </tr>
+                <tr data-level=2>
+                    <th scope="row" class="font-weight-min cursor text_left">
+                        <div class="field" contenteditable="true">
+                            Стекло
+                        </div>
+                        <div class="delete"></div>
+                    </th>
+                    <td><div class="field">-50 000,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">-50 000,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                </tr>
+                <tr data-level=2>
+                    <th scope="row" class="font-weight-min cursor text_left">
+                        <div class="field" contenteditable="true">
+                            Фурнитура
+                        </div>
+                        <div class="delete"></div>
+                    </th>
+                    <td><div class="field">-30 000,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">-30 000,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                </tr>
+                <tr data-level=1>
+                    <th scope="row" class="font_weight_max cursor text_left">
+                        <div class="arrow"></div>
+                        <div class="field" contenteditable="true">
+                            Химия
+                        </div>
+                        <span class="float_right plus"></span>
+                        <span class="float_right folder"></span>
+                    </th>
+                    <td><div class="field">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                </tr>
+                <tr data-level=2>
+                    <th scope="row" class="font-weight-min cursor text_left">
+                        <div class="field" contenteditable="true">
+                            Краска
+                        </div>
+                        <div class="delete"></div>
+                    </th>
+                    <td><div class="field">-70 000,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">-70 000,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                </tr>
+                <tr data-level=2>
+                    <th scope="row" class="font-weight-min cursor text_left">
+                        <div class="field" contenteditable="true">
+                            Лак
+                        </div>
+                        <div class="delete"></div>
+                    </th>
+                    <td><div class="field">-50 000,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">-50 000,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                </tr>
+                <tr data-level=0>
+                    <th scope="row" class="font-weight-min cursor text_left">
+                        <div class="field" contenteditable="true">
+                            Аренда инструмента
+                        </div>
+                        <div class="delete"></div>
+                    </th>
+                    <td><div class="field">-200 000,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">-200 000,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                </tr>
+                <tr data-level=0>
+                    <th scope="row" class="font-weight-min cursor text_left">
+                        <div class="field" contenteditable="true">
+                            Аренда офиса
+                        </div>
+                        <div class="delete"></div>
+                    </th>
+                    <td><div class="field">-200 000,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">-200 000,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                </tr>
+                <tr data-level=0>
+                    <th scope="row" class="font-weight-min cursor text_left">
+                        <div class="field" contenteditable="true">
+                            Коммунальные платежи
+                        </div>
+                        <div class="delete"></div>
+                    </th>
+                    <td><div class="field">-30 000,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">-30 000,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                </tr>
+                <tr data-level=0>
+                    <th scope="row" class="font-weight-min cursor text_left">
+                        <div class="field" contenteditable="true">
+                            Транспорт
+                        </div>
+                        <div class="delete"></div>
+                    </th>
+                    <td><div class="field">-15 000,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">-15 000,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                </tr>
+                <tr id="balance" data-level=-1 class="table-active header_tr not_calc">
+                    <th scope="row" class="font_weight_max text_left">Сальдо</th>
+                    <td class="font_weight_max">0,00 ₽</td>
+                    <td class="font_weight_max">0,00 ₽</td>
+                    <td class="font_weight_max">0,00 ₽</td>
+                    <td class="font_weight_max">0,00 ₽</td>
+                    <td class="font_weight_max">0,00 ₽</td>
+                    <td class="font_weight_max">0,00 ₽</td>
+                    <td class="font_weight_max">0,00 ₽</td>
+                    <td class="font_weight_max">0,00 ₽</td>
+                    <td class="font_weight_max">0,00 ₽</td>
+                    <td class="font_weight_max">0,00 ₽</td>
+                    <td class="font_weight_max">0,00 ₽</td>
+                    <td class="font_weight_max">0,00 ₽</td>
+                    <td class="font_weight_max">0,00 ₽</td>
+                </tr>
+                <tr id="row_template" class="not_calc">
+                    <th class="font-weight-min cursor text_left">
+                        <div class="field" contenteditable="true">
 
-                    </div>
-                    <div class="delete"></div>
-                </th>
-                <td><div class="field">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-            </tr>
+                        </div>
+                        <div class="delete"></div>
+                    </th>
+                    <td><div class="field">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                </tr>
 
-            <tr id="folder_template" class="not_calc">
-                <th scope="row" class="font-weight-max cursor text-left">
-                    <div class="arrow"></div>
-                    <div class="field" contenteditable="true">
+                <tr id="folder_template" class="not_calc">
+                    <th scope="row" class="font_weight_max cursor text_left">
+                        <div class="arrow"></div>
+                        <div class="field" contenteditable="true">
 
-                    </div>
-                    <span class="float_right plus"></span>
-                    <span class="float_right folder"></span>
-                </th>
-                <td><div class="field">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-                <td><div class="field" contenteditable="true">0,00 ₽</div></td>
-            </tr>
-            </tbody>
-        </table>
+                        </div>
+                        <span class="float_right plus"></span>
+                        <span class="float_right folder"></span>
+                    </th>
+                    <td><div class="field">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                    <td><div class="field" contenteditable="true">0,00 ₽</div></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </body>
 </html>

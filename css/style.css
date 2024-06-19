@@ -1,5 +1,7 @@
-.container-fluid {
-    margin-left: 40px;
+#wrapper {
+    width: 95%;
+    overflow-x: scroll;
+    margin-left: 5%;
 }
 .cursor {
     cursor: pointer;
@@ -9,6 +11,7 @@
     font-weight: 700;
     font-size: 27px;
     margin-top: 40px;
+    margin-left: 5%;
 }
 table {
     margin-top: 30px;
@@ -21,7 +24,7 @@ table {
     display: none;
     width: 16px;
     height: 16px;
-    background: url(".././img/delete.svg");
+    background: url("../img/delete.svg");
     position: absolute;
     right: 4px;
     top: 12px;
@@ -31,7 +34,7 @@ th:hover > .delete {
     vertical-align: center;
 }
 .delete:hover {
-    background: url(".././img/delete_active.svg");
+    background: url("../img/delete_active.svg");
 }
 svg {
     cursor: pointer;
@@ -49,11 +52,11 @@ td {
 th {
     min-height: 38px;
 }
-.font-weight-max {
+.font_weight_max {
     font-weight: 700;
     font-size: 14px;
 }
-.text-left {
+.text_left {
     max-width: 250px;
     min-height: 38px;
     text-align: left;
@@ -64,13 +67,13 @@ th {
 .plus {
     width: 24px;
     height: 24px;
-    background: url(".././img/plus.svg");
+    background: url("../img/plus.svg");
     position: absolute;
     right: 4px;
     top: 8px;
 }
 .float_right.plus:hover {
-    background: url(".././img/plus_active.svg");
+    background: url("../img/plus_active.svg");
 }
 .folder {
     width: 24px;
@@ -163,7 +166,9 @@ table .header_tr th:first-child {
 table tr:has(td .field:focus, th .field:focus) {
     --bs-table-bg-state: white!important;
 }
-
+table tr.table-active{
+    --bs-table-active-bg: #f7f7f7;
+}
 table tr td {
     padding: 0!important;
     position: relative;
@@ -174,7 +179,7 @@ table tr th {
     position: relative;
 }
 table tr:not(:first-child):hover {
-    --bs-table-bg-state: #e5e5e5;
+    --bs-table-bg-state: #f7f7f7;
 }
 
 .arrow_right {

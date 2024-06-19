@@ -1,5 +1,10 @@
 trList = document.getElementsByTagName('tr')
 fieldList = document.querySelectorAll("td .field")
+firstColFieldList = document.querySelectorAll("th .field")
+var focusOnNewFolder = false
+for(let field of firstColFieldList) {
+    field.addEventListener("keypress", checkEnter)
+}
 attachEventsToFieldList(fieldList)
 function attachEventsToFieldList(fieldList){
     for(let field of fieldList) {
@@ -58,7 +63,11 @@ function addRow (e) {
     applyPadding(row)
     let fieldList = row.querySelectorAll("td .field")
     attachEventsToFieldList(fieldList)
+    row.querySelector("th .field").addEventListener("keypress", checkEnter)
+    row.querySelector("th .field").addEventListener("blur", blurNewFolder)
     tr.after(row)
+    row.children[0].querySelector(".field").focus()
+    focusOnNewFolder = true
 }
 function addFolder(e){
     tr = e.target.parentElement.parentElement
@@ -76,7 +85,11 @@ function addFolder(e){
     applyPadding(row)
     let fieldList = row.querySelectorAll("td .field")
     attachEventsToFieldList(fieldList)
+    row.querySelector("th .field").addEventListener("keypress", checkEnter)
+    row.querySelector("th .field").addEventListener("blur", blurNewFolder)
     tr.after(row)
+    row.children[0].querySelector(".field").focus()
+    focusOnNewFolder = true
 }
 
 const arrows = document.getElementsByClassName("arrow");
@@ -112,7 +125,7 @@ function collapse(tr){
     }
 }
 function getNumberFromField(field){
-    let number =  field.innerText.slice(0, -2).replaceAll(/\s/g, '').replaceAll(",", ".")
+    let number =  field.textContent.trim().slice(0, -2).replaceAll(/\s/g, '').replaceAll(",", ".")
     let result = parseFloat(number).toFixed(2)
     return result
 }
@@ -131,9 +144,24 @@ function addR(e){
     calcTable()
 }
 
+function blurNewFolder(e){
+    if(focusOnNewFolder){
+        e.target.closest("tr").remove()
+    }
+}
+function checkEnter(e){
+    if(e.code == "Enter"){
+        focusOnNewFolder = false
+        e.target.blur()
+    }
+}
+
 function filterInput(e){
     let theEvent = e || window.event
     let key
+    if(theEvent.code == "Enter"){
+        e.target.blur()
+    }
     if (theEvent.type === 'paste') {
         key = event.clipboardData.getData('text/plain')
     } else {
@@ -157,33 +185,13 @@ function changeSortingTypeAndSort(e){
     if(e.target.classList.contains("arrow_sorting_number")){
         e.target.classList.remove("arrow_sorting_number")
         e.target.classList.add("arrow_sorting_az")
-        //sortAZ()
+        sort(1)
     } else {
         e.target.classList.remove("arrow_sorting_az")
         e.target.classList.add("arrow_sorting_number")
-        //sortNumber()
+        sort(0)
     }
 }
-
-function sortAZ(){
-    console.log("az")
-
-    let trs = document.getElementsByTagName("tr")
-    console.log(trs);
-    tbody.appendChild(trs[0]);
-    for(let i = trs.length-1; i > 0; i--){
-        tbody.appendChild(trs[i])
-    }
-}
-
-function sortNumber(){
-    console.log("number")
-}
-
-
-calcTable()
-
-
 function getPlaceForInsertFromTd(td){
     if (td.children.length > 0 && td.children[0].classList.contains("field")) {
         el = td.children[0]
@@ -192,6 +200,8 @@ function getPlaceForInsertFromTd(td){
     }
     return el
 }
+
+calcTable()
 function calcTable(){
     tbody = document.getElementById('tbody')
 
@@ -213,8 +223,6 @@ function calcTable(){
 
     }
 
-
-    console.log(tbody.children);
     for(let col = 1; col < 14; col++) {
         let stack_el = []
         let stack_sum = []
@@ -228,6 +236,7 @@ function calcTable(){
                     last_elem = tr
                     continue
                 }
+
                 let isFolder = parseInt(tr.dataset.level) == parseInt(tr.nextElementSibling.dataset.level)-1
                 if (parseInt(tr.dataset.level) > last_level) {
                     stack_el.push(last_elem)
@@ -281,7 +290,4 @@ function calcTable(){
         let sum = parseFloat(getNumberFromField(income.children[i])) + parseFloat(getNumberFromField(expenses.children[i]))
         balance.children[i].innerText = getStringFromNumber(sum)
     }
-
-
-
 }
