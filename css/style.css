@@ -131,8 +131,8 @@ td.active {
 .field {
     width: 197px;
     display: inline-block;
-    height: 38px;
-    padding: 9px 0;
+    height: 32px;
+    padding-top: 9px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;

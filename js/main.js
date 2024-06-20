@@ -131,8 +131,11 @@ function getNumberFromField(field){
 }
 
 function getStringFromNumber(number){
+
     let num = Math.floor(parseFloat(number)).toLocaleString()
     let non_integer_part = parseFloat(number).toFixed(2).toString().slice(-3)
+    if(num === "NaN" || non_integer_part === "NaN")
+        return "0.00 ₽"
     return (num+non_integer_part).replace(".", ",") + " ₽"
 }
 
@@ -145,7 +148,7 @@ function addR(e){
 }
 
 function blurNewFolder(e){
-    if(focusOnNewFolder){
+    if(focusOnNewFolder || e.target.innerText == ""){
         e.target.closest("tr").remove()
     }
 }
